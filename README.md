@@ -1,69 +1,101 @@
-# React + TypeScript + Vite
+# EduHub React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, React-based course management system for Lviv Polytechnic National University.
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**EduHub React** is a course work project aimed at improving the appearance and functionality of the existing CMS used at Lviv Polytechnic National University. The goal is to provide a more user-friendly, visually appealing, and feature-rich platform for students and faculty.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Modern, responsive UI built with React and TypeScript
+- Clean blue-white theme for a professional look
+- Authentication page with Google Auth integration
+- Modular, maintainable codebase using CSS Modules
+- Navigation bar with quick access to main sections
+- Ready for further expansion (courses, dashboard, etc.)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- [React](https://react.dev/) 19
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/) for fast development
+- [Lucide React](https://lucide.dev/) for icons
+- [React Router](https://reactrouter.com/) for navigation
+- CSS Modules for scoped styling
+- [ to be expanded soon ]
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Getting Started
+
+For local development, follow the steps listed below.
+
+1. **Clone the repository:**
+
+  ```sh
+  git clone https://github.com/cheporte/edu-hub-react.git
+  cd edu-hub-react
+  ```
+
+2. **Install dependencies:**
+
+  ```sh
+  npm install
+  ```
+
+3. **Start the development server:**
+
+  ```sh
+  npm run dev
+  ```
+
+4. **Open your browser:**
+
+  Visit [http://localhost:5173](http://localhost:5173) to view the app.
+
+## Scripts
+
+- `npm run dev` — Start development server
+- `npm run build` — Build for production
+- `npm run preview` — Preview production build
+- `npm run lint` — Lint the codebase
+
+## Folder Structure
+
+```
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   └── Navbar/
+│   ├── pages/
+│   │   └── Auth/
+│   ├── App.tsx
+│   └── main.tsx
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── ...
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ToDo
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Implement the dashboard
+  - [ ] course listings
+  - [ ] deadlines and quick navigation between courses
+- Implement the course section
+  - [ ] lecture materials
+  - [ ] assignments
+  - [ ] inidividual course statistics
+  - [ ] inside chat for communication between students and their professor 
+- Implement the user profile page
+  - [ ] profile customization
+  - [ ] overall statistics
+
+## License
+
+This project is for educational purposes at Lviv Polytechnic National University.
+
+---
+
+> Created as a course work project to modernize and enhance the university's digital learning experience.
