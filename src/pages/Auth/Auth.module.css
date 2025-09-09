@@ -1,0 +1,132 @@
+.googleBtn {
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.googleBtn:hover {
+  transform: scale(1.06);
+}
+
+.authPage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2776d6;
+  background: radial-gradient(circle, rgba(39, 118, 214, 1) 0%, rgba(181, 235, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);
+}
+
+.authContainer {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  padding: 40px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 340px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #2776D6;
+  text-align: center;
+}
+
+.text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  color: #2776D6;
+  text-align: center;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input {
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.input:focus {
+  border: 1.5px solid #2776d6;
+}
+
+.logInBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #2776d6;
+  background: linear-gradient(90deg, rgba(39, 118, 214, 1) 0%, rgba(181, 235, 255, 1) 50%, rgba(39, 118, 214, 1) 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(123,47,242,0.08);
+}
+
+.logInBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(90deg, #2776d6 0%, #60a5fa 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(39,118,214,0.08);
+  position: relative;
+}
+.logInBtn:hover {
+  background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
+  transform: scale(1.02);
+  animation: transform 0.2s ease-in-out;
+}
+
+/* Tooltip for unavailable login */
+.logInBtn[disabled], .logInBtn[aria-disabled="true"] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.logInBtn[disabled]:hover::after, .logInBtn[aria-disabled="true"]:hover::after {
+  content: "Email/password unavailable, use Google Auth instead";
+  position: absolute;
+  left: 50%;
+  top: 110%;
+  transform: translateX(-50%);
+  background: #2776d6;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(39,118,214,0.12);
+  z-index: 10;
+  pointer-events: none;
+}
