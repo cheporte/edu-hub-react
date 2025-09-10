@@ -2,12 +2,16 @@
 .navbar {
 	width: 90%;
 	height: 64px;
-	background: #fff;
+	background: rgba(255,255,255,0.28);
+	backdrop-filter: blur(14px) saturate(160%);
+	-webkit-backdrop-filter: blur(14px) saturate(160%);
+	border: 1.5px solid rgba(255,255,255,0.32);
+	box-shadow: 0 4px 24px rgba(39,118,214,0.10);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 32px;
-	box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+	border-radius: 18px;
 	position: sticky;
 	top: 0;
 	z-index: 100;
