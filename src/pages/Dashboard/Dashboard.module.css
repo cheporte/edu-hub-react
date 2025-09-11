@@ -16,3 +16,13 @@
   width: 100%;
   max-width: 1100px;
 }
+
+.importantSection {
+  display: flex;
+  gap: 32px;
+  margin-top: 24px;
+  padding: 0 24px;
+  width: 100%;
+  max-width: 1100px;
+  justify-content: center;
+}
