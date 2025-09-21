@@ -1,0 +1,80 @@
+.unitDropdown {
+    position: relative;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.unitDropdownButton {
+    background: #2563eb;
+    color: white;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    min-width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.2s, border 0.2s;
+}
+.unitDropdownButton:hover {
+    background: #4e78d4;
+    border-color: #a1a1aa;
+}
+
+.unitDropdownIcon {
+    margin-right: 10px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.unitDropdownContent {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding: 6px 0;
+    z-index: 20;
+    animation: dropdownFadeIn 0.18s ease;
+}
+
+@keyframes dropdownFadeIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.unitDropdownContent a,
+.unitDropdownContent .unitDropdownLink {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    color: #22223b;
+    text-decoration: none;
+    font-size: 0.98rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s;
+    border-radius: 4px;
+    outline: none;
+    position: relative;
+}
+.unitDropdownContent a:focus,
+.unitDropdownContent .unitDropdownLink:focus {
+    background: #e0e7ff;
+    color: #3730a3;
+    box-shadow: 0 0 0 2px #6366f1;
+}
+.unitDropdownContent a:hover,
+.unitDropdownContent .unitDropdownLink:hover {
+    background: #f3f4f6;
+    color: #4f46e5;
+}
+.unitDropdownContent .unitDropdownLink svg {
+    flex-shrink: 0;
+}

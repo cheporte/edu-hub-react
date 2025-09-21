@@ -1,7 +1,8 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Auth from "./pages/Auth"
-import Dashboard from "./pages/Dashboard"
+import Auth from "./pages/Auth";
+import Dashboard from "./pages/Dashboard";
+import CoursePage from "./pages/CoursePage";
 
 function App() {
   return (
@@ -9,9 +10,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Auth />} />
         <Route path="/my" element={<Dashboard />} />
+        <Route
+          path="/course"
+          element={<CoursePage userId={"1"} courseId={"1"} />}
+        />
       </Routes>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
