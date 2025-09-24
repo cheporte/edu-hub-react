@@ -1,6 +1,7 @@
 .unitDropdown {
     position: relative;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 10px 0;
 }
 
 .unitDropdownButton {
@@ -15,7 +16,9 @@
     min-width: 100%;
     font-size: 1rem;
     font-weight: 500;
-    transition: background 0.2s, border 0.2s;
+    transition:
+        background 0.2s,
+        border 0.2s;
 }
 .unitDropdownButton:hover {
     background: #4e78d4;
@@ -29,22 +32,28 @@
 }
 
 .unitDropdownContent {
-    position: absolute;
+    /*position: absolute;
     top: 110%;
-    left: 0;
+    left: 0;*/
     width: 100%;
     background: #fff;
     border: 1px solid #e5e7eb;
     border-radius: 6px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     padding: 6px 0;
     z-index: 20;
-    animation: dropdownFadeIn 0.18s ease;
+    animation: dropdownFadeIn 0.5s ease-in-out;
 }
 
 @keyframes dropdownFadeIn {
-    from { opacity: 0; transform: translateY(-8px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .unitDropdownContent a,
@@ -59,7 +68,9 @@
     border: none;
     background: none;
     cursor: pointer;
-    transition: background 0.18s, color 0.18s;
+    transition:
+        background 0.18s,
+        color 0.18s;
     border-radius: 4px;
     outline: none;
     position: relative;

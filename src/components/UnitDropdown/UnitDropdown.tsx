@@ -23,6 +23,9 @@ const fileIcon = (type: string) => {
   }
 };
 
+/*
+ * TODO: Make this component not only for units, but for any type of content that can be placed (materials, labs, submissions, etc).
+ */
 const UnitDropdown: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -30,7 +33,10 @@ const UnitDropdown: React.FC = () => {
   // Close dropdown on outside click
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
       }
     }
