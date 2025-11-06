@@ -2,6 +2,8 @@ import React from "react";
 
 import Navbar from "../../components/Navbar";
 import UnitDropdown from "../../components/UnitDropdown";
+import RecentNews from "../../components/RecentNews";
+
 import styles from "./CoursePage.module.css";
 
 type props = {
@@ -16,7 +18,7 @@ const CoursePage: React.FC<props> = () => {
     <div className={styles.container}>
       <Navbar />
       <div className={styles.courseMain}>
-        <main className={styles.courseInfo}>
+        <div className={styles.courseInfo}>
           <h1>Course Title</h1>
           <p>Welcome to the course page!</p>
           <div className={styles.unitsList}>
@@ -26,7 +28,19 @@ const CoursePage: React.FC<props> = () => {
             <UnitDropdown />
             <UnitDropdown />
           </div>
-        </main>
+        </div>
+        <aside>
+          <RecentNews />
+          {/* A temporary placeholder for chat section */}
+          <div className={styles.chatBlock}>
+            <div className={styles.chatMessages}>
+              <p><strong>Alice:</strong> Hi everyone!</p>            
+            </div>
+            <div className={styles.chatMessages}>
+              <p><strong>Alice:</strong> Hi everyone!</p>            
+            </div>
+          </div>
+        </aside>
       </div>
     </div>
   );

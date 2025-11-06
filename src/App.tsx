@@ -4,6 +4,7 @@ import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
 import CoursePage from "./pages/CoursePage";
 
+
 function App() {
   return (
     <Router>
