@@ -1,19 +1,20 @@
 import React from 'react';
 
 import Navbar from '../../components/Navbar';
-import Deadlines from '../../components/Deadlines';
 import CourseThumbnail from '../../components/CourseThumbnail';
-import RecentNews from '../../components/RecentNews';
+
+import UpdatesPanel from '../../components/UpdatesPanel';
 
 import styles from './Dashboard.module.css';
+import { sampleNews, sampleDeadlines } from '../../data/updatesPanelData';
 
 const Dashboard: React.FC = () => {
   return (
     <div className={styles.dashboardContainer}>
       <Navbar />
       <div className={styles.importantSection}>
-        <Deadlines />
-        <RecentNews />
+        <UpdatesPanel panelHeadline="Deadlines" contentType="deadlines" content={sampleDeadlines}/>
+        <UpdatesPanel panelHeadline="News" contentType="news" content={sampleNews}/>
       </div>
       
       <div className={styles.courseList}>
