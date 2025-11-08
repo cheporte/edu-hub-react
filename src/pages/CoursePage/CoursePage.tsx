@@ -2,7 +2,9 @@ import React from "react";
 
 import Navbar from "../../components/Navbar";
 import UnitDropdown from "../../components/UnitDropdown";
-import RecentNews from "../../components/RecentNews";
+
+import UpdatesPanel from "../../components/UpdatesPanel";
+import { sampleAnnouncements } from "../../data/updatesPanelData";
 
 import styles from "./CoursePage.module.css";
 
@@ -30,7 +32,7 @@ const CoursePage: React.FC<props> = () => {
           </div>
         </div>
         <aside>
-          <RecentNews />
+          <UpdatesPanel panelHeadline="Announcements" contentType="announcements" content={sampleAnnouncements} />
           {/* A temporary placeholder for chat section */}
           <div className={styles.chatBlock}>
             <div className={styles.chatMessages}>
