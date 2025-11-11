@@ -32,7 +32,7 @@ For local development, follow the steps listed below.
 1. **Clone the repository:**
 
   ```sh
-  git clone https://github.com/cheporte/edu-hub-react.git
+  git clone https://github.com/noqtisnox/edu-hub-react.git
   cd edu-hub-react
   ```
 
